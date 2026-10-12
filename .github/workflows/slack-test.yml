@@ -13,7 +13,7 @@ jobs:
               run: |
                 test -n "$SLACK_WEBHOOK_URL"
                 
-                curl --fail --silent -show-error \
+                curl --fail -show-error \
                 -X POST \
                 -H 'Content-type: application/json' \
                 --data '{"text":"This is a test notification from GitHub Actions."}' \
